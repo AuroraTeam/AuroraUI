@@ -1,0 +1,35 @@
+{
+  "name": "auroraui",
+  "version": "0.0.1",
+  "description": "SASS/CSS фреймворк пользовательского интерфейса Aurora Launcher",
+  "main": "sass/auroraui.sass",
+  "scripts": {
+    "dev": "npm run build:css -- --watch",
+    "build": "npm run build:css && npm run build:css-min",
+    "build:css": "sass sass/:css/",
+    "build:css-min": "cleancss --source-map -o css/auroraui.min.css css/auroraui.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AuroraTeam/AuroraUI.git"
+  },
+  "keywords": [
+    "sсss",
+    "css",
+    "framework",
+    "ui"
+  ],
+  "author": "AuroraTeam",
+  "contributors": [
+    "JoCat (https://github.com/JoCat)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AuroraTeam/AuroraUI/issues"
+  },
+  "homepage": "https://github.com/AuroraTeam/AuroraUI#readme",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "sass": "^1.32.5"
+  }
+}
