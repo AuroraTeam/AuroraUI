@@ -1,2 +1,2 @@
 # AuroraUI
-SASS/CSS фреймворк пользовательского интерфейса Aurora Launcher
+Sass/CSS фреймворк пользовательского интерфейса Aurora Launcher

@@ -1,20 +1,23 @@
 {
   "name": "auroraui",
   "version": "0.0.1",
-  "description": "SASS/CSS фреймворк пользовательского интерфейса Aurora Launcher",
+  "description": "Sass/CSS фреймворк пользовательского интерфейса Aurora Launcher",
   "main": "sass/auroraui.sass",
   "scripts": {
-    "dev": "npm run build:css -- --watch",
-    "build": "npm run build:css && npm run build:css-min",
-    "build:css": "sass sass/:css/",
-    "build:css-min": "cleancss --source-map -o css/auroraui.min.css css/auroraui.css"
+    "dev": "concurrently 'npm:build-watch' 'npm:serve'",
+    "build-watch": "npm run build-css -- --watch",
+    "serve": "browser-sync start --server --files 'css/*.css' --startPath 'demo'",
+    "build": "npm run build-css && npm run build-autoprefix && npm run build-css-min",
+    "build-css": "sass sass:css",
+    "build-css-min": "cleancss -o css/auroraui.min.css css/auroraui.css",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/auroraui.css css/auroraui.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AuroraTeam/AuroraUI.git"
   },
   "keywords": [
-    "sсss",
+    "sass",
     "css",
     "framework",
     "ui"
@@ -29,7 +32,12 @@
   },
   "homepage": "https://github.com/AuroraTeam/AuroraUI#readme",
   "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "browser-sync": "^2.26.14",
     "clean-css-cli": "^4.3.0",
+    "concurrently": "^5.3.0",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
     "sass": "^1.32.5"
   }
 }
