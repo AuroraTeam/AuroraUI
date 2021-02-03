@@ -1,21 +1,30 @@
 .btn
-    padding: 8px 20px
     border: 0
     outline: 0
+    padding: 10px 22px
+    cursor: pointer
     color: #fff
     font-weight: 700
     font-size: .875rem
     font-family: inherit
     border-radius: 16px
-    border: 2px solid transparent
     background-color: transparent
 
 @each $color, $colorHex in ("red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "blue": $blue, "purple": $purple)
     .btn-#{$color}
         background-color: $colorHex
+        color: #000
+        @if $color == 'purple'
+            color: #fff
     .btn-border-#{$color}
-        border-color: $colorHex
+        border: 2px solid $colorHex
+        padding: 8px 20px
 
-
-.btn-gradient
+.btn-gradient-1
     background: $gradient-1
+.btn-gradient-2
+    background: $gradient-2
+    color: #000
+.btn-gradient-3
+    background: $gradient-3
+    color: #000

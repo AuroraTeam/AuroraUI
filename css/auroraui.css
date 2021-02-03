@@ -11,69 +11,98 @@ body {
   padding: 15px;
 }
 
+[disabled],
+.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .btn {
-  padding: 8px 20px;
   border: 0;
   outline: 0;
+  padding: 10px 22px;
+  cursor: pointer;
   color: #fff;
   font-weight: 700;
   font-size: 0.875rem;
   font-family: inherit;
   border-radius: 16px;
-  border: 2px solid transparent;
   background-color: transparent;
 }
 
 .btn-red {
   background-color: #FF3A20;
+  color: #000;
 }
 
 .btn-border-red {
-  border-color: #FF3A20;
+  border: 2px solid #FF3A20;
+  padding: 8px 20px;
 }
 
 .btn-orange {
   background-color: #FB5012;
+  color: #000;
 }
 
 .btn-border-orange {
-  border-color: #FB5012;
+  border: 2px solid #FB5012;
+  padding: 8px 20px;
 }
 
 .btn-yellow {
   background-color: #F1A208;
+  color: #000;
 }
 
 .btn-border-yellow {
-  border-color: #F1A208;
+  border: 2px solid #F1A208;
+  padding: 8px 20px;
 }
 
 .btn-green {
   background-color: #20BF55;
+  color: #000;
 }
 
 .btn-border-green {
-  border-color: #20BF55;
+  border: 2px solid #20BF55;
+  padding: 8px 20px;
 }
 
 .btn-blue {
   background-color: #2575FC;
+  color: #000;
 }
 
 .btn-border-blue {
-  border-color: #2575FC;
+  border: 2px solid #2575FC;
+  padding: 8px 20px;
 }
 
 .btn-purple {
   background-color: #7F47DD;
+  color: #000;
+  color: #fff;
 }
 
 .btn-border-purple {
-  border-color: #7F47DD;
+  border: 2px solid #7F47DD;
+  padding: 8px 20px;
 }
 
-.btn-gradient {
+.btn-gradient-1 {
   background: linear-gradient(88.14deg, #7F47DD 0%, #2575FC 100%);
+}
+
+.btn-gradient-2 {
+  background: linear-gradient(88.14deg, #FFEC61 0%, #F321D7 100%);
+  color: #000;
+}
+
+.btn-gradient-3 {
+  background: linear-gradient(88.14deg, #24FF72 0%, #2196F3 100%);
+  color: #000;
 }
 
 /*# sourceMappingURL=auroraui.css.map */
